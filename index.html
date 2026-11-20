@@ -42,6 +42,9 @@
 <body>
   <a class="skip" href="#contenido">Saltar al contenido</a>
 
+  <!-- AVISO DE DEMOSTRACIÓN: borre este bloque cuando el cliente entregue sus datos reales -->
+  <div class="demo-note">Versión de demostración · Los textos, cifras, rutas y novedades son de ejemplo.</div>
+
   <!-- ============ BARRA SUPERIOR ============ -->
   <div class="topbar">
     <div class="container topbar__inner">
@@ -127,9 +130,11 @@
         <ul class="menu__list" id="menuList">
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#solicitar">Cómo solicitar</a></li>
+          <li><a href="#rutas">Rutas y horarios</a></li>
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#novedades">Novedades</a></li>
           <li><a href="#ubicaciones">Ubicaciones</a></li>
-          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#preguntas">Preguntas</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </div>
@@ -144,9 +149,19 @@
           <li><a href="#servicios"><span><svg class="ico" aria-hidden="true"><use href="#i-fuel"/></svg></span>Transporte de combustible</a></li>
           <li><a href="#servicios"><span><svg class="ico" aria-hidden="true"><use href="#i-boat"/></svg></span>Transporte de mercancías</a></li>
           <li><a href="#" data-wa="Hola, quiero solicitar un servicio."><span><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg></span>Solicitar por WhatsApp</a></li>
+          <li><a href="#rutas"><span><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg></span>Rutas y horarios</a></li>
           <li><a href="#ubicaciones"><span><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg></span>Puntos de atención</a></li>
-          <li><a href="#contacto"><span><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg></span>Horarios y contacto</a></li>
         </ul>
+      </div>
+    </section>
+
+    <!-- ============ CIFRAS (ejemplo) ============ -->
+    <section class="stats" aria-label="La Pedrera en cifras">
+      <div class="container stats__grid">
+        <div><strong data-count="12">12</strong><span>años navegando la región</span></div>
+        <div><strong data-count="1500" data-prefix="+">+1.500</strong><span>viajes realizados</span></div>
+        <div><strong data-count="8">8</strong><span>destinos atendidos</span></div>
+        <div><strong data-count="350" data-prefix="+">+350</strong><span>productos de primera necesidad</span></div>
       </div>
     </section>
 
@@ -180,6 +195,106 @@
               <h3>Transporte de víveres con embarcaciones</h3>
               <p>Movimiento de mercancías de forma segura, eficiente y adaptada a las necesidades de cada destino.</p>
               <a href="#" class="item__link" data-wa="Hola, necesito transporte de mercancías.">Solicitar servicio</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ RUTAS Y HORARIOS (ejemplo) ============ -->
+    <section class="section section--soft" id="rutas">
+      <div class="container">
+        <h2 class="title">Rutas y horarios de salida</h2>
+        <p class="lead">Salidas programadas desde nuestro embarcadero. Los horarios pueden variar según el nivel del río y el clima; confirme siempre por WhatsApp antes de enviar su carga.</p>
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr><th>Ruta</th><th>Frecuencia</th><th>Día de salida</th><th>Tiempo aprox.</th><th>Carga</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-l="Ruta">La Pedrera → Puerto Córdoba</td><td data-l="Frecuencia">Semanal</td><td data-l="Día de salida">Lunes 6:00 a. m.</td><td data-l="Tiempo aprox.">5 h</td><td data-l="Carga">Víveres y combustible</td></tr>
+              <tr><td data-l="Ruta">La Pedrera → Mirití-Paraná</td><td data-l="Frecuencia">Quincenal</td><td data-l="Día de salida">Martes 5:00 a. m.</td><td data-l="Tiempo aprox.">10 h</td><td data-l="Carga">Víveres y mercancía</td></tr>
+              <tr><td data-l="Ruta">La Pedrera → Araracuara</td><td data-l="Frecuencia">Mensual</td><td data-l="Día de salida">Primer jueves</td><td data-l="Tiempo aprox.">2 días</td><td data-l="Carga">Carga general</td></tr>
+              <tr><td data-l="Ruta">La Pedrera → Comunidades ribereñas</td><td data-l="Frecuencia">Semanal</td><td data-l="Día de salida">Viernes 6:00 a. m.</td><td data-l="Tiempo aprox.">Según destino</td><td data-l="Carga">Víveres</td></tr>
+              <tr><td data-l="Ruta">Fletes especiales</td><td data-l="Frecuencia">Bajo pedido</td><td data-l="Día de salida">A convenir</td><td data-l="Tiempo aprox.">Según destino</td><td data-l="Carga">Combustible y carga completa</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="cols2">
+          <div class="box">
+            <h3>Antes de enviar su carga</h3>
+            <ul class="checks">
+              <li>Reserve el cupo con mínimo 2 días de anticipación.</li>
+              <li>Entregue la carga en el embarcadero el día anterior a la salida.</li>
+              <li>Empaque y marque cada bulto con nombre y destino.</li>
+              <li>Presente documento de identidad de quien envía y de quien recibe.</li>
+            </ul>
+          </div>
+          <div class="box">
+            <h3>Transporte de combustible</h3>
+            <ul class="checks">
+              <li>Tambores sellados y en buen estado.</li>
+              <li>Embarcación con equipo de seguridad y extintores.</li>
+              <li>Manejo por personal capacitado.</li>
+              <li>Entrega directa en el punto acordado.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CATÁLOGO DE VÍVERES (ejemplo) ============ -->
+    <section class="section" id="catalogo">
+      <div class="container">
+        <h2 class="title">Catálogo de víveres</h2>
+        <p class="lead">Venta al por mayor y al detal para tiendas, comunidades, embarcaciones y hogares. Pida la lista de precios actualizada por WhatsApp.</p>
+        <ul class="cat">
+          <li><h3>Granos y abarrotes</h3><p>Arroz, fríjol, lenteja, azúcar, sal, panela, harinas, pastas.</p></li>
+          <li><h3>Aceites y enlatados</h3><p>Aceite, atún, sardinas, salchichas, leche en polvo, conservas.</p></li>
+          <li><h3>Bebidas</h3><p>Gaseosas, agua, jugos, café, chocolate, avena.</p></li>
+          <li><h3>Aseo personal</h3><p>Jabón, crema dental, papel higiénico, champú, toallas higiénicas.</p></li>
+          <li><h3>Aseo del hogar</h3><p>Detergente, cloro, jabón de barra, esponjas, bolsas.</p></li>
+          <li><h3>Ferretería básica</h3><p>Pilas, linternas, velas, cuerdas, plásticos, herramientas menores.</p></li>
+        </ul>
+        <a href="#" class="btn btn--green" data-wa="Hola, quiero la lista de precios de víveres.">Pedir lista de precios</a>
+      </div>
+    </section>
+
+    <!-- ============ NOVEDADES (ejemplo) ============ -->
+    <section class="section section--soft" id="novedades">
+      <div class="container">
+        <h2 class="title">Novedades</h2>
+        <ul class="list">
+          <li class="item item--news">
+            <img src="img/hero-embarcacion.jpg" alt="Embarcación de La Pedrera en el río" loading="lazy">
+            <div>
+              <time class="item__date">15/11/2026</time>
+              <h3>Nueva salida semanal hacia las comunidades ribereñas</h3>
+              <p>Desde este mes contamos con una salida fija cada viernes para llevar víveres a las comunidades del río.</p>
+            </div>
+          </li>
+          <li class="item item--news">
+            <img src="img/servicio-viveres.jpg" alt="Víveres en bodega" loading="lazy">
+            <div>
+              <time class="item__date">08/11/2026</time>
+              <h3>Ampliamos nuestro surtido de víveres</h3>
+              <p>Llegaron nuevas referencias de abarrotes, aseo y bebidas. Pida la lista de precios actualizada.</p>
+            </div>
+          </li>
+          <li class="item item--news">
+            <img src="img/servicio-combustible.jpg" alt="Tambores de combustible" loading="lazy">
+            <div>
+              <time class="item__date">30/10/2026</time>
+              <h3>Recomendaciones para el envío de combustible</h3>
+              <p>Conozca cómo preparar sus tambores para que el transporte sea más rápido y seguro.</p>
+            </div>
+          </li>
+          <li class="item item--news">
+            <img src="img/servicio-transporte.jpg" alt="Embarcación cargada" loading="lazy">
+            <div>
+              <time class="item__date">20/10/2026</time>
+              <h3>Ahora puede solicitar su servicio por WhatsApp</h3>
+              <p>Nuestro asistente recibe su solicitud a cualquier hora y un asesor continúa la atención en el mismo chat.</p>
             </div>
           </li>
         </ul>
@@ -230,6 +345,53 @@
             <li>Atención a comunidades, comercios y embarcaciones</li>
             <li>Solicitudes por WhatsApp en minutos</li>
           </ul>
+        </div>
+      </div>
+      <div class="container cols3">
+        <div class="box">
+          <h3>Misión</h3>
+          <p>Abastecer a las comunidades de la región con víveres, combustible y mercancías de forma segura, puntual y a precio justo, usando el río como camino.</p>
+        </div>
+        <div class="box">
+          <h3>Visión</h3>
+          <p>Ser en 2030 la empresa de transporte fluvial y abastecimiento de mayor confianza del sur del Amazonas colombiano.</p>
+        </div>
+        <div class="box">
+          <h3>Valores</h3>
+          <p>Responsabilidad, puntualidad, honestidad, respeto por las comunidades y cuidado del río y la selva.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PREGUNTAS FRECUENTES ============ -->
+    <section class="section" id="preguntas">
+      <div class="container">
+        <h2 class="title">Preguntas frecuentes</h2>
+        <div class="faq">
+          <details open>
+            <summary>¿Cómo solicito un servicio?</summary>
+            <p>Escríbanos por WhatsApp. El asistente le pregunta qué servicio necesita, el origen y el destino, y un asesor continúa la atención en el mismo chat.</p>
+          </details>
+          <details>
+            <summary>¿Con cuánta anticipación debo reservar?</summary>
+            <p>Recomendamos reservar con mínimo 2 días de anticipación para asegurar el cupo en la embarcación.</p>
+          </details>
+          <details>
+            <summary>¿Qué formas de pago reciben?</summary>
+            <p>Efectivo, transferencia bancaria y pagos por Nequi o Daviplata. El pago se acuerda al confirmar el servicio.</p>
+          </details>
+          <details>
+            <summary>¿Venden víveres al por mayor?</summary>
+            <p>Sí. Atendemos tiendas, comunidades y embarcaciones con precios especiales por volumen. Pida la lista de precios por WhatsApp.</p>
+          </details>
+          <details>
+            <summary>¿La carga va asegurada?</summary>
+            <p>Toda la carga se registra al recibirla y viaja bajo el cuidado de nuestra tripulación. Consulte las condiciones al reservar.</p>
+          </details>
+          <details>
+            <summary>¿Qué pasa si el río está bajo o hay mal clima?</summary>
+            <p>Por seguridad, la salida puede reprogramarse. Le avisamos por WhatsApp con la nueva fecha.</p>
+          </details>
         </div>
       </div>
     </section>
@@ -286,10 +448,12 @@
       <div>
         <h4>Enlaces</h4>
         <ul>
+          <li><a href="#rutas">Rutas y horarios</a></li>
+          <li><a href="#catalogo">Catálogo de víveres</a></li>
+          <li><a href="#novedades">Novedades</a></li>
           <li><a href="#solicitar">Cómo solicitar</a></li>
-          <li><a href="#ubicaciones">Puntos de atención</a></li>
+          <li><a href="#preguntas">Preguntas frecuentes</a></li>
           <li><a href="#nosotros">Nosotros</a></li>
-          <li><a href="#contacto">Contacto</a></li>
         </ul>
       </div>
       <div>
@@ -310,8 +474,9 @@
     </div>
   </footer>
 
-  <a href="#" class="wa-float" data-wa="Hola, quiero información sobre sus servicios." aria-label="Escríbanos por WhatsApp">
-    <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+  <a href="#" class="wa-float" data-wa="Hola, me interesa conocer sus servicios." aria-label="¿Te interesa? Contáctanos por WhatsApp">
+    <span class="wa-float__icon"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg></span>
+    <span class="wa-float__text"><small>¿Te interesa?</small><strong>¡Contáctanos!</strong></span>
   </a>
 
   <!-- ============ ÍCONOS ============ -->

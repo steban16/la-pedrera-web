@@ -273,6 +273,30 @@ function initFormulario() {
   $$("[required]", form).forEach((c) => c.addEventListener("input", () => c.setAttribute("aria-invalid", "false")));
 }
 
+/* ---------- Cifras que cuentan hacia arriba ---------- */
+function initCifras() {
+  const nums = $$("[data-count]");
+  if (!nums.length || reducido) return;
+  const fmt = (n) => n.toLocaleString("es-CO");
+  nums.forEach((el) => (el.textContent = (el.dataset.prefix || "") + "0"));
+  const obs = new IntersectionObserver((entradas) => {
+    entradas.forEach((e) => {
+      if (!e.isIntersecting) return;
+      const el = e.target;
+      const fin = +el.dataset.count;
+      const t0 = performance.now();
+      const paso = (t) => {
+        const p = Math.min((t - t0) / 1400, 1);
+        el.textContent = (el.dataset.prefix || "") + fmt(Math.round(fin * (1 - Math.pow(1 - p, 3))));
+        if (p < 1) requestAnimationFrame(paso);
+      };
+      requestAnimationFrame(paso);
+      obs.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  nums.forEach((n) => obs.observe(n));
+}
+
 /* ---------- Inicio ---------- */
 document.addEventListener("DOMContentLoaded", () => {
   initEnlaces();
@@ -282,4 +306,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initUbicaciones();
   initBuscador();
   initFormulario();
+  initCifras();
 });
