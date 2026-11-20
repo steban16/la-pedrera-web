@@ -42,8 +42,25 @@
 <body>
   <a class="skip" href="#contenido">Saltar al contenido</a>
 
-  <!-- AVISO DE DEMOSTRACIÓN: borre este bloque cuando el cliente entregue sus datos reales -->
-  <div class="demo-note">Versión de demostración · Los textos, cifras, rutas y novedades son de ejemplo.</div>
+
+  <!-- ============ MENÚ ============ -->
+  <nav class="menu" id="menu" aria-label="Menú principal">
+    <div class="container menu__inner">
+      <button class="menu__toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="menuList">
+        <span class="menu__bars" aria-hidden="true"></span> Menú
+      </button>
+      <ul class="menu__list" id="menuList">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#rutas">Rutas y horarios</a></li>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#novedades">Novedades</a></li>
+        <li><a href="#ubicaciones">Ubicaciones</a></li>
+        <li><a href="#preguntas">Preguntas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
 
   <!-- ============ BARRA SUPERIOR ============ -->
   <div class="topbar">
@@ -83,24 +100,6 @@
 
   <main id="contenido">
 
-    <!-- ============ MENÚ ============ -->
-    <nav class="menu" id="menu" aria-label="Menú principal">
-      <div class="container menu__inner">
-        <button class="menu__toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="menuList">
-          <span class="menu__bars" aria-hidden="true"></span> Menú
-        </button>
-        <ul class="menu__list" id="menuList">
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#rutas">Rutas y horarios</a></li>
-          <li><a href="#catalogo">Catálogo</a></li>
-          <li><a href="#novedades">Novedades</a></li>
-          <li><a href="#ubicaciones">Ubicaciones</a></li>
-          <li><a href="#preguntas">Preguntas</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </div>
-    </nav>
 
     <!-- ============ SLIDER ============ -->
     <section class="slider" id="inicio" aria-roledescription="carrusel" aria-label="Destacados">
