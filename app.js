@@ -57,24 +57,11 @@ function initEnlaces() {
   $("#year").textContent = new Date().getFullYear();
 }
 
-/* ---------- Accesibilidad: tamaño de letra y contraste ---------- */
+/* ---------- Accesibilidad: alto contraste ---------- */
 function initAccesibilidad() {
   const html = document.documentElement;
-  let tam = 100;
   const guardar = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
   const leer = (k) => { try { return localStorage.getItem(k); } catch (e) { return null; } };
-
-  const aplicarTam = () => { html.style.fontSize = `${tam}%`; guardar("lp-font", tam); };
-  tam = Number(leer("lp-font")) || 100;
-  aplicarTam();
-
-  $$("[data-font]").forEach((b) =>
-    b.addEventListener("click", () => {
-      const a = b.dataset.font;
-      tam = a === "up" ? Math.min(tam + 10, 140) : a === "down" ? Math.max(tam - 10, 80) : 100;
-      aplicarTam();
-    })
-  );
 
   const btn = $("#contrastBtn");
   const aplicarContraste = (on) => {

@@ -53,9 +53,6 @@
         <span data-wa-text>+57 300 000 0000</span>
       </a>
       <div class="a11y" role="group" aria-label="Accesibilidad">
-        <button type="button" data-font="up" aria-label="Aumentar tamaño de letra">A+</button>
-        <button type="button" data-font="reset" aria-label="Tamaño de letra normal">A</button>
-        <button type="button" data-font="down" aria-label="Disminuir tamaño de letra">A-</button>
         <button type="button" id="contrastBtn" aria-pressed="false" aria-label="Alto contraste">
           <svg class="ico" aria-hidden="true"><use href="#i-contrast"/></svg>
         </button>
@@ -85,6 +82,25 @@
   </header>
 
   <main id="contenido">
+
+    <!-- ============ MENÚ ============ -->
+    <nav class="menu" id="menu" aria-label="Menú principal">
+      <div class="container menu__inner">
+        <button class="menu__toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="menuList">
+          <span class="menu__bars" aria-hidden="true"></span> Menú
+        </button>
+        <ul class="menu__list" id="menuList">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#rutas">Rutas y horarios</a></li>
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#novedades">Novedades</a></li>
+          <li><a href="#ubicaciones">Ubicaciones</a></li>
+          <li><a href="#preguntas">Preguntas</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
 
     <!-- ============ SLIDER ============ -->
     <section class="slider" id="inicio" aria-roledescription="carrusel" aria-label="Destacados">
@@ -121,24 +137,6 @@
       <div class="slider__dots" role="tablist" aria-label="Elegir diapositiva"></div>
     </section>
 
-    <!-- ============ MENÚ ============ -->
-    <nav class="menu" id="menu" aria-label="Menú principal">
-      <div class="container menu__inner">
-        <button class="menu__toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="menuList">
-          <span class="menu__bars" aria-hidden="true"></span> Menú
-        </button>
-        <ul class="menu__list" id="menuList">
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#rutas">Rutas y horarios</a></li>
-          <li><a href="#catalogo">Catálogo</a></li>
-          <li><a href="#novedades">Novedades</a></li>
-          <li><a href="#ubicaciones">Ubicaciones</a></li>
-          <li><a href="#preguntas">Preguntas</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </div>
-    </nav>
 
     <!-- ============ ACCESOS RÁPIDOS ============ -->
     <section class="quick">
