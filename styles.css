@@ -243,6 +243,23 @@ ul, ol { margin: 0; padding: 0; }
 @keyframes waBounce { 0%, 90%, 100% { transform: none; } 93% { transform: translateY(-8px); } 96% { transform: translateY(0); } 98% { transform: translateY(-4px); } }
 .footer__entity { padding-bottom: 6.5rem !important; } /* espacio para que el botón no tape el pie */
 
+/* ---------- Video ---------- */
+.video-sec__inner { display: grid; grid-template-columns: 1fr 1.5fr; gap: 2.5rem; align-items: center; }
+.video-sec__tagline { font-size: 1.3rem; font-style: italic; font-weight: 600; color: var(--green-2); margin-top: -.6rem; }
+.video-sec__text > p { color: var(--muted); }
+.video-sec .checks { margin-bottom: 1.5rem; }
+.video-box { position: relative; border-radius: 8px; overflow: hidden; background: #000; box-shadow: 0 12px 32px rgba(11,42,74,.22); aspect-ratio: 16 / 9; }
+.video-box video { width: 100%; height: 100%; display: block; object-fit: cover; }
+.video-box__play {
+  position: absolute; inset: 0; margin: auto; width: 84px; height: 84px; border-radius: 50%;
+  border: 0; cursor: pointer; background: rgba(30,154,70,.92); color: #fff;
+  display: grid; place-items: center; box-shadow: 0 0 0 10px rgba(255,255,255,.25);
+  transition: transform .2s, background .2s;
+}
+.video-box__play svg { width: 42px; height: 42px; margin-left: 5px; }
+.video-box__play:hover { transform: scale(1.08); background: var(--green); }
+.video-box.is-playing .video-box__play { display: none; }
+
 /* ---------- Aviso de demostración ---------- */
 .demo-note { background: #fff4d6; color: #6b4e00; text-align: center; font-size: .82rem; padding: .35rem 1rem; }
 
@@ -310,6 +327,8 @@ html.contrast .faq summary, html.contrast .table td:first-child { color: #ffeb3b
   .quick__grid { grid-template-columns: repeat(3, 1fr); }
   .steps { grid-template-columns: repeat(2, 1fr); }
   .places, .contact { grid-template-columns: 1fr; }
+  .video-sec__inner { grid-template-columns: 1fr; }
+  .video-box { order: -1; }
   .cat { grid-template-columns: repeat(2, 1fr); }
   .cols3 { grid-template-columns: 1fr; }
 }

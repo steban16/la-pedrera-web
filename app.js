@@ -297,6 +297,21 @@ function initCifras() {
   nums.forEach((n) => obs.observe(n));
 }
 
+/* ---------- Video de presentación ---------- */
+function initVideo() {
+  const video = $("#promoVideo");
+  const play = $("#videoPlay");
+  if (!video) return;
+  const caja = video.parentElement;
+  // Con JS se usa el botón grande; los controles aparecen al reproducir
+  video.controls = false;
+  play.addEventListener("click", () => { video.controls = true; video.play(); });
+  video.addEventListener("play", () => caja.classList.add("is-playing"));
+  video.addEventListener("ended", () => { caja.classList.remove("is-playing"); video.controls = false; video.load(); });
+  // Pausa si el usuario sigue bajando y el video sale de pantalla
+  new IntersectionObserver(([e]) => { if (!e.isIntersecting && !video.paused) video.pause(); }, { threshold: 0.2 }).observe(video);
+}
+
 /* ---------- Inicio ---------- */
 document.addEventListener("DOMContentLoaded", () => {
   initEnlaces();
@@ -307,4 +322,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initBuscador();
   initFormulario();
   initCifras();
+  initVideo();
 });
