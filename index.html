@@ -348,6 +348,10 @@
             <!-- Se llena desde app.js (CONFIG.ubicaciones) -->
           </ul>
           <div class="map">
+            <div class="map__types" role="group" aria-label="Tipo de mapa">
+              <button type="button" data-maptype="m" aria-pressed="false">Mapa</button>
+              <button type="button" data-maptype="k" aria-pressed="true">Satélite</button>
+            </div>
             <iframe id="mapFrame" title="Mapa de ubicación" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
           </div>
         </div>
@@ -426,7 +430,7 @@
           <ul class="info">
             <li><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg><span><small>WhatsApp</small><a href="#" data-wa="Hola" data-wa-text>+57 300 000 0000</a></span></li>
             <li><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg><span><small>Correo</small><a href="#" id="emailLink">contacto@distribucioneslapedrera.com</a></span></li>
-            <li><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span><small>Oficina principal</small>La Pedrera, Amazonas, Colombia</span></li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span><small>Oficina principal</small>Calle principal, frente a la cancha · La Pedrera, Amazonas</span></li>
             <li><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg><span><small>Horario</small>Lunes a sábado · 7:00 a. m. – 6:00 p. m.</span></li>
           </ul>
         </div>

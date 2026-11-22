@@ -17,12 +17,46 @@ const CONFIG = {
     tiktok: "https://www.tiktok.com/",       // TODO
   },
 
-  // "consulta" es lo que se busca en Google Maps: dirección, nombre en Google o "lat,lng"
+  /* PUNTOS DE ATENCIÓN (las coordenadas actuales son DE PRUEBA, en el pueblo de La Pedrera)
+     Para cambiarlas por las reales:
+       1. Abra Google Maps y busque el lugar.
+       2. Haga clic derecho exactamente sobre el sitio.
+       3. El primer renglón del menú son las coordenadas (ej. -1.318559, -69.586087):
+          haga clic en ellas y quedan copiadas.
+       4. Pegue el primer número en "lat" y el segundo en "lng".
+     Si el negocio ya tiene Perfil de Empresa en Google, puede poner su nombre exacto
+     en "consulta" (ej. "Distribuciones La Pedrera S.A.S., La Pedrera"): el mapa
+     mostrará la ficha del negocio con fotos y reseñas en vez de un simple marcador. */
   ubicaciones: [
-    { nombre: "Oficina principal", detalle: "Atención administrativa y cotizaciones", consulta: "La Pedrera, Amazonas, Colombia", imagen: "img/servicio-transporte.jpg" },
-    { nombre: "Punto de venta de víveres", detalle: "Productos de primera necesidad", consulta: "La Pedrera, Amazonas, Colombia", imagen: "img/servicio-viveres.jpg" },
-    { nombre: "Embarcadero fluvial", detalle: "Cargue y descargue de mercancías", consulta: "Río Caquetá, La Pedrera, Amazonas, Colombia", imagen: "img/servicio-combustible.jpg" },
+    {
+      nombre: "Oficina principal",
+      detalle: "Atención administrativa, cotizaciones y pagos",
+      direccion: "Calle principal, frente a la cancha · La Pedrera",
+      horario: "Lun a sáb · 7:00 a. m. – 6:00 p. m.",
+      lat: -1.318559, lng: -69.586087,
+      imagen: "img/servicio-transporte.jpg",
+    },
+    {
+      nombre: "Punto de venta de víveres",
+      detalle: "Productos de primera necesidad al por mayor y al detal",
+      direccion: "Barrio centro, a una cuadra de la oficina · La Pedrera",
+      horario: "Lun a dom · 6:00 a. m. – 8:00 p. m.",
+      lat: -1.319213, lng: -69.586602,
+      imagen: "img/servicio-viveres.jpg",
+    },
+    {
+      nombre: "Embarcadero fluvial",
+      detalle: "Recepción, cargue y descargue de mercancías y combustible",
+      direccion: "Orilla del río Caquetá, junto al muelle · La Pedrera",
+      horario: "Lun a sáb · 5:00 a. m. – 5:00 p. m.",
+      lat: -1.3171, lng: -69.585004,
+      imagen: "img/servicio-combustible.jpg",
+    },
   ],
+
+  // Tipo de mapa inicial: "k" = satélite, "m" = mapa de calles
+  tipoMapa: "k",
+
 
   // Tiempo entre diapositivas del slider (milisegundos)
   intervaloSlider: 6000,
@@ -36,8 +70,11 @@ const formatoTel = (n) => {
   const m = n.match(/^(\d{2})(\d{3})(\d{3})(\d{4})$/);
   return m ? `+${m[1]} ${m[2]} ${m[3]} ${m[4]}` : `+${n}`;
 };
-const mapsEmbed = (q) => `https://maps.google.com/maps?q=${encodeURIComponent(q)}&z=14&output=embed`;
-const mapsRuta = (q) => `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(q)}`;
+// Cada ubicación usa su "consulta" (nombre en Google) o, si no tiene, sus coordenadas
+const destino = (u) => u.consulta || `${u.lat},${u.lng}`;
+const mapsEmbed = (u, tipo = "k") => `https://maps.google.com/maps?q=${encodeURIComponent(destino(u))}&t=${tipo}&z=17&output=embed`;
+const mapsRuta = (u) => `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destino(u))}`;
+const mapsVer = (u) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(destino(u))}`;
 const reducido = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 document.documentElement.classList.remove("no-js");
@@ -149,6 +186,8 @@ function initMenu() {
 function initUbicaciones() {
   const lista = $("#placeList");
   const frame = $("#mapFrame");
+  let actual = 0;
+  let tipo = CONFIG.tipoMapa || "k";
 
   lista.innerHTML = CONFIG.ubicaciones
     .map((u, i) => `
@@ -157,15 +196,22 @@ function initUbicaciones() {
         <div>
           <h3>${u.nombre}</h3>
           <p>${u.detalle}</p>
-          <a class="item__link" href="${mapsRuta(u.consulta)}" target="_blank" rel="noopener">Cómo llegar</a>
+          <p class="place__meta">${u.direccion}<br>${u.horario}</p>
+          <a class="item__link" href="${mapsRuta(u)}" target="_blank" rel="noopener">Cómo llegar</a>
+          <a class="item__link" href="${mapsVer(u)}" target="_blank" rel="noopener">Ver en Google Maps</a>
         </div>
       </li>`)
     .join("");
 
-  const elegir = (i) => {
-    $$(".item", lista).forEach((li) => li.setAttribute("aria-selected", String(+li.dataset.i === i)));
-    frame.src = mapsEmbed(CONFIG.ubicaciones[i].consulta);
+  const pintar = () => {
+    $$(".item", lista).forEach((li) => li.setAttribute("aria-selected", String(+li.dataset.i === actual)));
+    $$("[data-maptype]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.maptype === tipo)));
+    frame.src = mapsEmbed(CONFIG.ubicaciones[actual], tipo);
+    frame.title = `Mapa: ${CONFIG.ubicaciones[actual].nombre}`;
   };
+  const elegir = (i) => { actual = i; pintar(); };
+
+  $$("[data-maptype]").forEach((b) => b.addEventListener("click", () => { tipo = b.dataset.maptype; pintar(); }));
 
   lista.addEventListener("click", (e) => {
     if (e.target.closest("a")) return;
@@ -191,7 +237,7 @@ function initBuscador() {
   // Índice simple: cada sección y cada elemento de lista con su texto
   const indice = [
     ...$$("#servicios .item").map((el) => ({ titulo: $("h3", el).textContent, seccion: "Servicios", destino: el, texto: el.textContent })),
-    ...CONFIG.ubicaciones.map((u) => ({ titulo: u.nombre, seccion: "Puntos de atención", destino: $("#ubicaciones"), texto: `${u.nombre} ${u.detalle} ubicación mapa dirección` })),
+    ...CONFIG.ubicaciones.map((u) => ({ titulo: u.nombre, seccion: "Puntos de atención", destino: $("#ubicaciones"), texto: `${u.nombre} ${u.detalle} ${u.direccion} ubicación mapa dirección` })),
     ...$$("main section[id]").map((s) => ({ titulo: ($(".title, h1", s) || {}).textContent || s.id, seccion: "Sección", destino: s, texto: s.textContent })),
   ];
   const norm = (t) => t.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
