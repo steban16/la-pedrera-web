@@ -1,0 +1,15 @@
+{
+  "name": "la-pedrera-web",
+  "private": true,
+  "type": "module",
+  "description": "Sitio web, bot de WhatsApp y panel de solicitudes de Distribuciones La Pedrera S.A.S.",
+  "scripts": {
+    "test": "node tests/bot.test.mjs"
+  },
+  "dependencies": {
+    "@netlify/database": "latest"
+  },
+  "engines": {
+    "node": ">=20.12.2"
+  }
+}

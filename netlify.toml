@@ -1,0 +1,17 @@
+# Configuración de Netlify
+# - La página pública vive en /public (así el código del servidor no se publica).
+# - Las funciones del bot y del panel viven en /netlify/functions.
+# - La base de datos (Netlify Database / Postgres) se crea sola al desplegar,
+#   y aplica las migraciones de /netlify/database/migrations.
+
+[build]
+  publish = "public"
+
+[functions]
+  directory = "netlify/functions"
+
+# El panel del empleado no debe aparecer en buscadores
+[[headers]]
+  for = "/panel*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"

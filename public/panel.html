@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Panel de solicitudes · La Pedrera</title>
+  <meta name="theme-color" content="#0b2a4a">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Chivo+Mono:wght@400;600&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="panel.css">
+</head>
+<body>
+
+  <!-- ================= ENTRADA ================= -->
+  <main class="login" id="login">
+    <form class="login__card" id="loginForm">
+      <span class="chip"><img src="img/logo.svg" alt="" width="44" height="18"></span>
+      <h1>Panel de solicitudes</h1>
+      <p>Solicitudes que llegan por el bot de WhatsApp de Distribuciones La Pedrera.</p>
+      <label for="clave">Clave del panel</label>
+      <input id="clave" type="password" autocomplete="current-password" required>
+      <p class="login__error" id="loginError" role="alert"></p>
+      <button class="btn btn--sign" type="submit">Entrar</button>
+      <a class="volver" href="./">Volver a la página</a>
+    </form>
+  </main>
+
+  <!-- ================= PANEL ================= -->
+  <div class="app" id="app" hidden>
+    <header class="top">
+      <div class="top__brand">
+        <span class="chip"><img src="img/logo.svg" alt="" width="44" height="18"></span>
+        <div><strong>Solicitudes</strong><small>Bot de WhatsApp · La Pedrera</small></div>
+      </div>
+      <div class="top__right">
+        <span class="sync" id="sync" aria-live="polite"></span>
+        <button class="btn-mini" id="refresh" type="button">Actualizar</button>
+        <button class="btn-mini" id="logout" type="button">Salir</button>
+      </div>
+    </header>
+
+    <nav class="filters" id="filters" aria-label="Filtrar por estado"></nav>
+
+    <div class="layout">
+      <section class="list" aria-label="Lista de solicitudes">
+        <label class="search">
+          <span class="sr-only">Buscar</span>
+          <input id="buscar" type="search" placeholder="Buscar por código, nombre, teléfono o destino">
+        </label>
+        <ul id="lista"></ul>
+        <p class="empty" id="vacio" hidden>No hay solicitudes con este filtro.</p>
+      </section>
+
+      <section class="detail" id="detalle" aria-live="polite">
+        <div class="detail__empty" id="sinSeleccion">
+          <svg viewBox="0 0 120 60" aria-hidden="true"><path d="M5 40 C 30 20, 55 50, 80 30 S 110 25, 115 35" fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="round"/></svg>
+          <p>Elija una solicitud para ver los datos, cambiar su estado y responder al cliente.</p>
+        </div>
+
+        <article class="detail__body" id="ficha" hidden>
+          <button class="back" id="volver" type="button">← Volver a la lista</button>
+          <header class="detail__head">
+            <div>
+              <p class="code" id="fCodigo"></p>
+              <h2 id="fNombre"></h2>
+              <a class="phone" id="fTelefono" target="_blank" rel="noopener"></a>
+            </div>
+            <span class="badge" id="fBadge"></span>
+          </header>
+
+          <dl class="facts" id="fDatos"></dl>
+
+          <form class="state" id="estadoForm">
+            <label for="fEstado">Estado</label>
+            <select id="fEstado"></select>
+            <label class="check"><input type="checkbox" id="fAvisar" checked> Avisar al cliente por WhatsApp</label>
+            <button class="btn btn--sign" type="submit">Guardar estado</button>
+            <p class="note" id="estadoNota" role="status"></p>
+          </form>
+
+          <h3 class="chat__title">Conversación</h3>
+          <ol class="chat" id="chat"></ol>
+
+          <form class="reply" id="respuestaForm">
+            <label for="fRespuesta" class="sr-only">Respuesta al cliente</label>
+            <textarea id="fRespuesta" rows="2" placeholder="Escriba la respuesta al cliente…" maxlength="4000"></textarea>
+            <button class="btn btn--wa" type="submit">Enviar</button>
+            <p class="note" id="respuestaNota" role="status"></p>
+          </form>
+        </article>
+      </section>
+    </div>
+  </div>
+
+  <script src="panel.js" defer></script>
+</body>
+</html>
