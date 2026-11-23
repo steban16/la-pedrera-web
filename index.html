@@ -1,263 +1,271 @@
 <!DOCTYPE html>
-<html lang="es-CO" class="no-js">
+<html lang="es-CO">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO básico -->
-  <title>Distribuciones La Pedrera S.A.S. | Transporte fluvial, víveres y combustible en Amazonas</title>
-  <meta name="description" content="Distribuciones La Pedrera S.A.S.: venta de víveres, transporte de combustible y transporte fluvial de mercancías para La Pedrera y la región del Amazonas. Solicite su servicio por WhatsApp.">
-  <meta name="keywords" content="transporte fluvial, La Pedrera, Amazonas, víveres, combustible, transporte de mercancías, embarcaciones, Colombia">
+  <!-- SEO -->
+  <title>Distribuciones La Pedrera S.A.S. | Transporte fluvial, víveres y combustible por el río Caquetá</title>
+  <meta name="description" content="Transporte fluvial de víveres, combustible y mercancías por el río Caquetá desde La Pedrera, Amazonas. Rutas, horarios, catálogo de víveres y atención por WhatsApp.">
   <meta name="robots" content="index, follow">
   <!-- TODO: cambiar por el dominio real del cliente -->
   <link rel="canonical" href="https://la-pedrera.netlify.app/">
+  <meta name="theme-color" content="#0b2a4a">
 
-  <!-- Vista previa al compartir (WhatsApp / Facebook) -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_CO">
   <meta property="og:title" content="Distribuciones La Pedrera S.A.S.">
-  <meta property="og:description" content="Transporte fluvial, víveres y combustible para la región.">
+  <meta property="og:description" content="Transporte fluvial, víveres y combustible por el río Caquetá.">
   <meta property="og:image" content="https://la-pedrera.netlify.app/img/hero-embarcacion.jpg">
 
   <link rel="icon" href="img/logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Chivo+Mono:wght@400;600&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
-  <!-- Datos para Google (negocio local) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Distribuciones La Pedrera S.A.S.",
-    "description": "Transporte fluvial, venta de víveres y transporte de combustible para la región.",
+    "description": "Transporte fluvial, venta de víveres y transporte de combustible por el río Caquetá.",
     "image": "https://la-pedrera.netlify.app/img/hero-embarcacion.jpg",
     "telephone": "+57 300 000 0000",
     "address": { "@type": "PostalAddress", "addressLocality": "La Pedrera", "addressRegion": "Amazonas", "addressCountry": "CO" },
-    "areaServed": "Amazonas, Colombia"
+    "geo": { "@type": "GeoCoordinates", "latitude": -1.318559, "longitude": -69.586087 },
+    "areaServed": "Río Caquetá, Amazonas, Colombia"
   }
   </script>
 </head>
 <body>
   <a class="skip" href="#contenido">Saltar al contenido</a>
 
+  <!-- ================= MENÚ (arriba del todo) ================= -->
+  <header class="nav" id="nav">
+    <div class="wrap nav__in">
+      <a class="brand" href="#inicio" aria-label="Distribuciones La Pedrera, inicio">
+        <span class="brand__chip"><img src="img/logo.svg" alt="" width="44" height="18"></span>
+        <span class="brand__name">La Pedrera <small>Distribuciones S.A.S.</small></span>
+      </a>
 
-  <!-- ============ MENÚ ============ -->
-  <nav class="menu" id="menu" aria-label="Menú principal">
-    <div class="container menu__inner">
-      <button class="menu__toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="menuList">
-        <span class="menu__bars" aria-hidden="true"></span> Menú
+      <button class="nav__toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navMenu">
+        <span class="nav__bars" aria-hidden="true"></span><span>Menú</span>
       </button>
-      <ul class="menu__list" id="menuList">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#rutas">Rutas y horarios</a></li>
-        <li><a href="#catalogo">Catálogo</a></li>
-        <li><a href="#novedades">Novedades</a></li>
-        <li><a href="#ubicaciones">Ubicaciones</a></li>
-        <li><a href="#preguntas">Preguntas</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </div>
-  </nav>
 
-  <!-- ============ BARRA SUPERIOR ============ -->
-  <div class="topbar">
-    <div class="container topbar__inner">
-      <a href="#" class="topbar__wa" data-wa="Hola, quiero información sobre sus servicios.">
-        <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
-        <span data-wa-text>+57 300 000 0000</span>
-      </a>
-      <div class="a11y" role="group" aria-label="Accesibilidad">
-        <button type="button" id="contrastBtn" aria-pressed="false" aria-label="Alto contraste">
-          <svg class="ico" aria-hidden="true"><use href="#i-contrast"/></svg>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- ============ ENCABEZADO ============ -->
-  <header class="header">
-    <div class="container header__inner">
-      <a href="#inicio" class="brand" aria-label="Distribuciones La Pedrera, inicio">
-        <img src="img/logo.svg" alt="" width="70" height="28">
-        <span class="brand__text">
-          <small>Distribuciones</small>
-          <strong>La Pedrera S.A.S.</strong>
-          <em>Transporte fluvial, víveres y combustible para la región</em>
-        </span>
-      </a>
-
-      <form class="search" id="searchForm" role="search" autocomplete="off">
-        <label for="q" class="sr-only">Buscar</label>
-        <input id="q" type="search" placeholder="Busca servicios, ubicaciones o información">
-        <button type="submit" aria-label="Buscar"><svg class="ico" aria-hidden="true"><use href="#i-search"/></svg></button>
-        <ul class="search__results" id="searchResults" hidden></ul>
-      </form>
+      <nav class="nav__menu" id="navMenu" aria-label="Menú principal">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#rutas">Rutas</a></li>
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#novedades">Novedades</a></li>
+          <li><a href="#ubicaciones">Ubicaciones</a></li>
+          <li><a href="#preguntas">Preguntas</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <a class="nav__wa" href="#" data-wa="Hola, quiero información sobre sus servicios.">
+          <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg><span data-wa-text>+57 300 000 0000</span>
+        </a>
+      </nav>
     </div>
   </header>
 
   <main id="contenido">
 
-
-    <!-- ============ SLIDER ============ -->
-    <section class="slider" id="inicio" aria-roledescription="carrusel" aria-label="Destacados">
-      <div class="slider__track" id="slides">
-        <article class="slide is-active" aria-roledescription="diapositiva" aria-label="1 de 3">
-          <img src="img/hero-embarcacion.jpg" alt="Embarcación cargada navegando por el río">
-          <div class="slide__text">
-            <h1>Transporte fluvial para un mejor futuro</h1>
-            <p>Conectamos su carga con las comunidades de la región.</p>
-            <a href="#servicios" class="btn btn--green">Conocer servicios</a>
-          </div>
-        </article>
-        <article class="slide" aria-roledescription="diapositiva" aria-label="2 de 3">
-          <img src="img/servicio-viveres.jpg" alt="Víveres de primera necesidad" loading="lazy">
-          <div class="slide__text">
-            <h2>Víveres para comunidades y comercios</h2>
-            <p>Productos de primera necesidad, cuando y donde los necesita.</p>
-            <a href="#" class="btn btn--green" data-wa="Hola, quiero información sobre la venta de víveres.">Pedir cotización</a>
-          </div>
-        </article>
-        <article class="slide" aria-roledescription="diapositiva" aria-label="3 de 3">
-          <img src="img/servicio-combustible.jpg" alt="Tambores de combustible" loading="lazy">
-          <div class="slide__text">
-            <h2>Solicite su servicio por WhatsApp</h2>
-            <p>Lo atendemos en minutos, desde el mismo número.</p>
-            <a href="#" class="btn btn--wa" data-wa="Hola, quiero solicitar un servicio.">
-              <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Escribir ahora
+    <!-- ================= PORTADA ================= -->
+    <section class="hero" id="inicio">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="coords"><span>01°19′ S</span><span>69°35′ O</span><span>Río Caquetá, Amazonas</span></p>
+          <h1 class="painted">Transporte fluvial para un mejor futuro</h1>
+          <p class="hero__lead">Llevamos víveres, combustible y mercancías por el río Caquetá, desde La Pedrera hasta las comunidades que lo necesitan.</p>
+          <div class="hero__cta">
+            <a class="btn btn--sign" href="#" data-wa="Hola, quiero solicitar un servicio.">
+              <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Pedir servicio por WhatsApp
             </a>
+            <a class="btn btn--line" href="#rutas">Ver rutas y horarios</a>
           </div>
-        </article>
+        </div>
+
+        <!-- Carrusel -->
+        <div class="slider" id="slider" aria-roledescription="carrusel" aria-label="Lo que hacemos">
+          <div class="slider__frame">
+            <figure class="slide is-active" aria-roledescription="diapositiva" aria-label="1 de 3">
+              <img src="img/hero-embarcacion.jpg" alt="Lancha cargada con víveres y tambores de combustible navegando por el río" width="1600" height="661">
+              <figcaption><strong>Transporte fluvial</strong> Carga completa o por bultos, salidas cada semana.</figcaption>
+            </figure>
+            <figure class="slide" aria-roledescription="diapositiva" aria-label="2 de 3">
+              <img src="img/servicio-viveres.jpg" alt="Víveres de primera necesidad en bodega" loading="lazy" width="781" height="563">
+              <figcaption><strong>Venta de víveres</strong> Al por mayor y al detal para tiendas y comunidades.</figcaption>
+            </figure>
+            <figure class="slide" aria-roledescription="diapositiva" aria-label="3 de 3">
+              <img src="img/servicio-combustible.jpg" alt="Tambores de combustible listos para cargar" loading="lazy" width="781" height="527">
+              <figcaption><strong>Transporte de combustible</strong> Tambores sellados y tripulación capacitada.</figcaption>
+            </figure>
+          </div>
+          <div class="slider__bar">
+            <button class="slider__btn" type="button" data-dir="-1" aria-label="Foto anterior">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+            </button>
+            <div class="slider__dots" role="tablist" aria-label="Elegir foto"></div>
+            <button class="slider__btn" type="button" data-dir="1" aria-label="Foto siguiente">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
       </div>
-      <button class="slider__arrow slider__arrow--prev" type="button" aria-label="Anterior">‹</button>
-      <button class="slider__arrow slider__arrow--next" type="button" aria-label="Siguiente">›</button>
-      <div class="slider__dots" role="tablist" aria-label="Elegir diapositiva"></div>
+
+      <!-- El río que cruza la portada -->
+      <div class="river" aria-hidden="true">
+        <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
+          <path class="river__bank" d="M0 70 C 180 20, 360 120, 560 80 S 920 20, 1100 70 S 1340 120, 1440 60 L1440 160 L0 160 Z"/>
+          <path class="river__water" id="riverPath" d="M0 92 C 180 42, 360 142, 560 102 S 920 42, 1100 92 S 1340 142, 1440 82"/>
+          <path class="river__shine" d="M0 92 C 180 42, 360 142, 560 102 S 920 42, 1100 92 S 1340 142, 1440 82"/>
+        </svg>
+        <svg class="river__boat" viewBox="0 0 1440 160" preserveAspectRatio="none">
+          <g id="boat">
+            <path d="M-22 -4 L22 -4 L16 6 L-18 6 Z" fill="#0b2a4a"/>
+            <rect x="-10" y="-13" width="14" height="9" fill="#f2b705"/>
+            <rect x="-16" y="-9" width="5" height="5" fill="#137a35"/>
+            <animateMotion id="boatMotion" dur="38s" repeatCount="indefinite" rotate="auto">
+              <mpath href="#riverPath"/>
+            </animateMotion>
+          </g>
+        </svg>
+      </div>
     </section>
 
-
-    <!-- ============ ACCESOS RÁPIDOS ============ -->
-    <section class="quick">
-      <div class="container">
-        <h2 class="band-title">Información para:</h2>
-        <ul class="quick__grid">
-          <li><a href="#servicios"><span><svg class="ico" aria-hidden="true"><use href="#i-cart"/></svg></span>Venta de víveres</a></li>
-          <li><a href="#servicios"><span><svg class="ico" aria-hidden="true"><use href="#i-fuel"/></svg></span>Transporte de combustible</a></li>
-          <li><a href="#servicios"><span><svg class="ico" aria-hidden="true"><use href="#i-boat"/></svg></span>Transporte de mercancías</a></li>
-          <li><a href="#" data-wa="Hola, quiero solicitar un servicio."><span><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg></span>Solicitar por WhatsApp</a></li>
-          <li><a href="#rutas"><span><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg></span>Rutas y horarios</a></li>
-          <li><a href="#ubicaciones"><span><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg></span>Puntos de atención</a></li>
+    <!-- ================= ¿QUÉ NECESITA HOY? ================= -->
+    <section class="tasks" aria-labelledby="tasksTitle">
+      <div class="wrap">
+        <h2 class="tasks__title" id="tasksTitle">¿Qué necesita hoy?</h2>
+        <ul class="tasks__list">
+          <li><a class="task" href="#" data-wa="Hola, quiero una cotización.">
+            <svg class="task__ico" aria-hidden="true"><use href="#i-quote"/></svg>
+            <strong>Pedir una cotización</strong><span>Víveres, combustible o flete</span></a></li>
+          <li><a class="task" href="#" data-wa="Hola, quiero reservar cupo en la próxima salida.">
+            <svg class="task__ico" aria-hidden="true"><use href="#i-boat"/></svg>
+            <strong>Reservar cupo en la lancha</strong><span>Con 2 días de anticipación</span></a></li>
+          <li><a class="task" href="#" data-wa="Hola, quiero la lista de precios de víveres.">
+            <svg class="task__ico" aria-hidden="true"><use href="#i-list"/></svg>
+            <strong>Lista de precios</strong><span>Actualizada cada semana</span></a></li>
+          <li><a class="task" href="#ubicaciones">
+            <svg class="task__ico" aria-hidden="true"><use href="#i-pin"/></svg>
+            <strong>Ubicar el embarcadero</strong><span>Junto al muelle del pueblo</span></a></li>
         </ul>
       </div>
     </section>
 
-    <!-- ============ VIDEO ============ -->
-    <section class="section video-sec" id="video">
-      <div class="container video-sec__inner">
-        <div class="video-sec__text">
-          <h2 class="title">Conózcanos en video</h2>
-          <p class="video-sec__tagline">Su aliado en el río</p>
-          <p>Vea en 20 segundos cómo llevamos víveres, combustible y mercancías desde nuestras bodegas y el embarcadero hasta las comunidades de la región.</p>
-          <ul class="checks">
-            <li>Venta de víveres</li>
-            <li>Transporte de combustible</li>
-            <li>Transporte fluvial de mercancías</li>
-          </ul>
-          <a href="#" class="btn btn--wa" data-wa="Hola, vi su video y me interesa un servicio.">
-            <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Solicitar un servicio
-          </a>
-        </div>
-        <div class="video-box">
+    <!-- ================= VIDEO ================= -->
+    <section class="video" id="video" aria-labelledby="videoTitle">
+      <div class="wrap video__grid">
+        <div class="video__box">
           <video id="promoVideo" src="video/la-pedrera.mp4" poster="video/la-pedrera-poster.jpg" preload="none" playsinline controls aria-label="Video de presentación de Distribuciones La Pedrera"></video>
-          <button class="video-box__play" id="videoPlay" type="button" aria-label="Reproducir video">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.5v13l11-6.5Z"/></svg>
+          <button class="video__play" id="videoPlay" type="button" aria-label="Reproducir video de 20 segundos">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5Z"/></svg>
           </button>
         </div>
+        <div class="video__copy">
+          <h2 class="painted painted--light" id="videoTitle">Su aliado en el río</h2>
+          <p>En 20 segundos: de la bodega al embarcadero y del embarcadero a las comunidades. Así trabajamos todos los días por el Caquetá.</p>
+          <dl class="stats">
+            <div><dt>años navegando</dt><dd data-count="12">12</dd></div>
+            <div><dt>viajes realizados</dt><dd data-count="1500" data-prefix="+">+1.500</dd></div>
+            <div><dt>destinos</dt><dd data-count="8">8</dd></div>
+            <div><dt>productos</dt><dd data-count="350" data-prefix="+">+350</dd></div>
+          </dl>
+        </div>
       </div>
     </section>
 
-    <!-- ============ CIFRAS (ejemplo) ============ -->
-    <section class="stats" aria-label="La Pedrera en cifras">
-      <div class="container stats__grid">
-        <div><strong data-count="12">12</strong><span>años navegando la región</span></div>
-        <div><strong data-count="1500" data-prefix="+">+1.500</strong><span>viajes realizados</span></div>
-        <div><strong data-count="8">8</strong><span>destinos atendidos</span></div>
-        <div><strong data-count="350" data-prefix="+">+350</strong><span>productos de primera necesidad</span></div>
-      </div>
-    </section>
+    <!-- ================= SERVICIOS ================= -->
+    <section class="section" id="servicios" aria-labelledby="servTitle">
+      <div class="wrap">
+        <header class="head">
+          <h2 class="painted" id="servTitle">Tres servicios, un mismo río</h2>
+          <p>Todo lo que una tienda, una comunidad o una embarcación necesita para abastecerse, con un solo contacto.</p>
+        </header>
 
-    <!-- ============ SERVICIOS (lista) ============ -->
-    <section class="section" id="servicios">
-      <div class="container">
-        <h2 class="title">Servicios</h2>
-        <ul class="list">
-          <li class="item">
-            <img src="img/servicio-viveres.jpg" alt="Víveres y productos de primera necesidad" loading="lazy">
-            <div>
-              <p class="item__tag">Venta</p>
+        <ol class="services">
+          <li class="service">
+            <img src="img/servicio-viveres.jpg" alt="Bodega con víveres de primera necesidad" loading="lazy" width="781" height="563">
+            <div class="service__body">
               <h3>Venta de víveres</h3>
               <p>Suministro de productos de primera necesidad para comunidades, comercios y embarcaciones.</p>
-              <a href="#" class="item__link" data-wa="Hola, quiero información sobre la venta de víveres.">Solicitar cotización</a>
+              <ul class="ticks">
+                <li>Precios por volumen para tiendas</li>
+                <li>Pedidos armados y listos para embarcar</li>
+                <li>Entrega en el embarcadero o en su destino</li>
+              </ul>
+              <a class="link" href="#" data-wa="Hola, quiero información sobre la venta de víveres.">Pedir cotización de víveres</a>
             </div>
           </li>
-          <li class="item">
-            <img src="img/servicio-combustible.jpg" alt="Tambores de combustible listos para el transporte" loading="lazy">
-            <div>
-              <p class="item__tag">Transporte</p>
+          <li class="service">
+            <img src="img/servicio-combustible.jpg" alt="Tambores de combustible en el embarcadero" loading="lazy" width="781" height="527">
+            <div class="service__body">
               <h3>Transporte de combustible</h3>
               <p>Transporte seguro y confiable de combustible para la región.</p>
-              <a href="#" class="item__link" data-wa="Hola, necesito transporte de combustible.">Solicitar servicio</a>
+              <ul class="ticks">
+                <li>Tambores sellados y registrados</li>
+                <li>Embarcación con extintores y equipo de seguridad</li>
+                <li>Entrega directa en el punto acordado</li>
+              </ul>
+              <a class="link" href="#" data-wa="Hola, necesito transporte de combustible.">Solicitar transporte de combustible</a>
             </div>
           </li>
-          <li class="item">
-            <img src="img/servicio-transporte.jpg" alt="Embarcación transportando mercancías" loading="lazy">
-            <div>
-              <p class="item__tag">Transporte fluvial</p>
+          <li class="service">
+            <img src="img/servicio-transporte.jpg" alt="Lancha cargada con mercancía en el río" loading="lazy" width="781" height="575">
+            <div class="service__body">
               <h3>Transporte de víveres con embarcaciones</h3>
               <p>Movimiento de mercancías de forma segura, eficiente y adaptada a las necesidades de cada destino.</p>
-              <a href="#" class="item__link" data-wa="Hola, necesito transporte de mercancías.">Solicitar servicio</a>
+              <ul class="ticks">
+                <li>Salidas programadas y fletes especiales</li>
+                <li>Carga registrada al recibirla</li>
+                <li>Aviso por WhatsApp al llegar</li>
+              </ul>
+              <a class="link" href="#" data-wa="Hola, necesito transporte de mercancías.">Solicitar transporte de mercancías</a>
             </div>
           </li>
-        </ul>
+        </ol>
       </div>
     </section>
 
-    <!-- ============ RUTAS Y HORARIOS (ejemplo) ============ -->
-    <section class="section section--soft" id="rutas">
-      <div class="container">
-        <h2 class="title">Rutas y horarios de salida</h2>
-        <p class="lead">Salidas programadas desde nuestro embarcadero. Los horarios pueden variar según el nivel del río y el clima; confirme siempre por WhatsApp antes de enviar su carga.</p>
-        <div class="table-wrap">
-          <table class="table">
-            <thead>
-              <tr><th>Ruta</th><th>Frecuencia</th><th>Día de salida</th><th>Tiempo aprox.</th><th>Carga</th></tr>
-            </thead>
-            <tbody>
-              <tr><td data-l="Ruta">La Pedrera → Puerto Córdoba</td><td data-l="Frecuencia">Semanal</td><td data-l="Día de salida">Lunes 6:00 a. m.</td><td data-l="Tiempo aprox.">5 h</td><td data-l="Carga">Víveres y combustible</td></tr>
-              <tr><td data-l="Ruta">La Pedrera → Mirití-Paraná</td><td data-l="Frecuencia">Quincenal</td><td data-l="Día de salida">Martes 5:00 a. m.</td><td data-l="Tiempo aprox.">10 h</td><td data-l="Carga">Víveres y mercancía</td></tr>
-              <tr><td data-l="Ruta">La Pedrera → Araracuara</td><td data-l="Frecuencia">Mensual</td><td data-l="Día de salida">Primer jueves</td><td data-l="Tiempo aprox.">2 días</td><td data-l="Carga">Carga general</td></tr>
-              <tr><td data-l="Ruta">La Pedrera → Comunidades ribereñas</td><td data-l="Frecuencia">Semanal</td><td data-l="Día de salida">Viernes 6:00 a. m.</td><td data-l="Tiempo aprox.">Según destino</td><td data-l="Carga">Víveres</td></tr>
-              <tr><td data-l="Ruta">Fletes especiales</td><td data-l="Frecuencia">Bajo pedido</td><td data-l="Día de salida">A convenir</td><td data-l="Tiempo aprox.">Según destino</td><td data-l="Carga">Combustible y carga completa</td></tr>
-            </tbody>
-          </table>
+    <!-- ================= RUTAS (mapa del río) ================= -->
+    <section class="section chart" id="rutas" aria-labelledby="rutasTitle">
+      <div class="wrap">
+        <header class="head">
+          <h2 class="painted" id="rutasTitle">Rutas y horarios de salida</h2>
+          <p>Toque un destino para ver el recorrido. Los horarios pueden cambiar según el nivel del río y el clima: confirme siempre por WhatsApp.</p>
+        </header>
+
+        <div class="chart__map">
+          <div class="chart__scroll">
+            <svg id="riverMap" viewBox="0 0 1000 380" role="img" aria-labelledby="mapDesc">
+              <desc id="mapDesc">Esquema del río Caquetá con La Pedrera y los destinos de nuestras rutas.</desc>
+            </svg>
+          </div>
+          <p class="chart__note">Esquema del río Caquetá · no está a escala</p>
         </div>
-        <div class="cols2">
-          <div class="box">
+
+        <ul class="routes" id="routeList"><!-- desde app.js (CONFIG.rutas) --></ul>
+
+        <div class="rules">
+          <div>
             <h3>Antes de enviar su carga</h3>
-            <ul class="checks">
+            <ul class="ticks">
               <li>Reserve el cupo con mínimo 2 días de anticipación.</li>
               <li>Entregue la carga en el embarcadero el día anterior a la salida.</li>
               <li>Empaque y marque cada bulto con nombre y destino.</li>
-              <li>Presente documento de identidad de quien envía y de quien recibe.</li>
+              <li>Presente documento de quien envía y de quien recibe.</li>
             </ul>
           </div>
-          <div class="box">
-            <h3>Transporte de combustible</h3>
-            <ul class="checks">
+          <div>
+            <h3>Para el combustible</h3>
+            <ul class="ticks">
               <li>Tambores sellados y en buen estado.</li>
-              <li>Embarcación con equipo de seguridad y extintores.</li>
-              <li>Manejo por personal capacitado.</li>
+              <li>Máximo de carga según la embarcación asignada.</li>
+              <li>Manejo solo por personal capacitado.</li>
               <li>Entrega directa en el punto acordado.</li>
             </ul>
           </div>
@@ -265,88 +273,91 @@
       </div>
     </section>
 
-    <!-- ============ CATÁLOGO DE VÍVERES (ejemplo) ============ -->
-    <section class="section" id="catalogo">
-      <div class="container">
-        <h2 class="title">Catálogo de víveres</h2>
-        <p class="lead">Venta al por mayor y al detal para tiendas, comunidades, embarcaciones y hogares. Pida la lista de precios actualizada por WhatsApp.</p>
-        <ul class="cat">
-          <li><h3>Granos y abarrotes</h3><p>Arroz, fríjol, lenteja, azúcar, sal, panela, harinas, pastas.</p></li>
-          <li><h3>Aceites y enlatados</h3><p>Aceite, atún, sardinas, salchichas, leche en polvo, conservas.</p></li>
-          <li><h3>Bebidas</h3><p>Gaseosas, agua, jugos, café, chocolate, avena.</p></li>
-          <li><h3>Aseo personal</h3><p>Jabón, crema dental, papel higiénico, champú, toallas higiénicas.</p></li>
-          <li><h3>Aseo del hogar</h3><p>Detergente, cloro, jabón de barra, esponjas, bolsas.</p></li>
-          <li><h3>Ferretería básica</h3><p>Pilas, linternas, velas, cuerdas, plásticos, herramientas menores.</p></li>
-        </ul>
-        <a href="#" class="btn btn--green" data-wa="Hola, quiero la lista de precios de víveres.">Pedir lista de precios</a>
+    <!-- ================= CATÁLOGO (tablero) ================= -->
+    <section class="section board" id="catalogo" aria-labelledby="catTitle">
+      <div class="wrap board__grid">
+        <div class="board__intro">
+          <h2 class="painted painted--light" id="catTitle">Catálogo de víveres</h2>
+          <p>Venta al por mayor y al detal para tiendas, comunidades, embarcaciones y hogares.</p>
+          <a class="btn btn--sign" href="#" data-wa="Hola, quiero la lista de precios de víveres.">Pedir lista de precios</a>
+        </div>
+        <dl class="board__list">
+          <div><dt>Granos y abarrotes</dt><dd>Arroz, fríjol, lenteja, azúcar, sal, panela, harinas, pastas</dd></div>
+          <div><dt>Aceites y enlatados</dt><dd>Aceite, atún, sardinas, salchichas, leche en polvo</dd></div>
+          <div><dt>Bebidas</dt><dd>Gaseosas, agua, jugos, café, chocolate, avena</dd></div>
+          <div><dt>Aseo personal</dt><dd>Jabón, crema dental, papel higiénico, champú</dd></div>
+          <div><dt>Aseo del hogar</dt><dd>Detergente, cloro, jabón de barra, esponjas, bolsas</dd></div>
+          <div><dt>Ferretería básica</dt><dd>Pilas, linternas, velas, cuerdas, plásticos</dd></div>
+        </dl>
       </div>
     </section>
 
-    <!-- ============ NOVEDADES (ejemplo) ============ -->
-    <section class="section section--soft" id="novedades">
-      <div class="container">
-        <h2 class="title">Novedades</h2>
-        <ul class="list">
-          <li class="item item--news">
-            <img src="img/hero-embarcacion.jpg" alt="Embarcación de La Pedrera en el río" loading="lazy">
-            <div>
-              <time class="item__date">15/11/2026</time>
-              <h3>Nueva salida semanal hacia las comunidades ribereñas</h3>
-              <p>Desde este mes contamos con una salida fija cada viernes para llevar víveres a las comunidades del río.</p>
-            </div>
-          </li>
-          <li class="item item--news">
-            <img src="img/servicio-viveres.jpg" alt="Víveres en bodega" loading="lazy">
-            <div>
-              <time class="item__date">08/11/2026</time>
-              <h3>Ampliamos nuestro surtido de víveres</h3>
-              <p>Llegaron nuevas referencias de abarrotes, aseo y bebidas. Pida la lista de precios actualizada.</p>
-            </div>
-          </li>
-          <li class="item item--news">
-            <img src="img/servicio-combustible.jpg" alt="Tambores de combustible" loading="lazy">
-            <div>
-              <time class="item__date">30/10/2026</time>
-              <h3>Recomendaciones para el envío de combustible</h3>
-              <p>Conozca cómo preparar sus tambores para que el transporte sea más rápido y seguro.</p>
-            </div>
-          </li>
-          <li class="item item--news">
-            <img src="img/servicio-transporte.jpg" alt="Embarcación cargada" loading="lazy">
-            <div>
-              <time class="item__date">20/10/2026</time>
-              <h3>Ahora puede solicitar su servicio por WhatsApp</h3>
-              <p>Nuestro asistente recibe su solicitud a cualquier hora y un asesor continúa la atención en el mismo chat.</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ============ CÓMO SOLICITAR ============ -->
-    <section class="section section--soft" id="solicitar">
-      <div class="container">
-        <h2 class="title">Cómo solicitar un servicio</h2>
+    <!-- ================= CÓMO SOLICITAR ================= -->
+    <section class="section steps-sec" id="solicitar" aria-labelledby="stepsTitle">
+      <div class="wrap">
+        <header class="head">
+          <h2 class="painted" id="stepsTitle">Pedir un servicio toma cuatro mensajes</h2>
+        </header>
         <ol class="steps">
-          <li><strong>Escríbanos por WhatsApp</strong> Envíe su consulta a cualquier hora.</li>
-          <li><strong>Responda unas preguntas</strong> El asistente le pide servicio, origen y destino.</li>
-          <li><strong>Registramos su solicitud</strong> Queda guardada para no perder ningún detalle.</li>
-          <li><strong>Un asesor lo atiende</strong> Continúa la conversación en el mismo chat.</li>
+          <li><strong>Escríbanos por WhatsApp</strong><span>A cualquier hora, desde cualquier celular.</span></li>
+          <li><strong>Responda tres preguntas</strong><span>Qué servicio, desde dónde y hacia dónde.</span></li>
+          <li><strong>Quedó registrado</strong><span>Su solicitud se guarda con todos los detalles.</span></li>
+          <li><strong>Un asesor lo atiende</strong><span>En el mismo chat, con precio y fecha de salida.</span></li>
         </ol>
-        <a href="#" class="btn btn--wa" data-wa="Hola, quiero solicitar un servicio.">
-          <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Iniciar solicitud
+        <a class="btn btn--wa" href="#" data-wa="Hola, quiero solicitar un servicio.">
+          <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Empezar por WhatsApp
         </a>
       </div>
     </section>
 
-    <!-- ============ UBICACIONES ============ -->
-    <section class="section" id="ubicaciones">
-      <div class="container">
-        <h2 class="title">Puntos de atención</h2>
+    <!-- ================= NOVEDADES ================= -->
+    <section class="section" id="novedades" aria-labelledby="newsTitle">
+      <div class="wrap news__grid">
+        <header class="head head--side">
+          <h2 class="painted" id="newsTitle">Novedades del río</h2>
+          <p>Salidas nuevas, productos y avisos para nuestros clientes.</p>
+        </header>
+        <ul class="news">
+          <li>
+            <time datetime="2026-11-15">15 nov 2026</time>
+            <div>
+              <h3>Nueva salida semanal hacia las comunidades ribereñas</h3>
+              <p>Desde este mes salimos cada viernes a las 6:00 a. m. con víveres para las comunidades del río.</p>
+            </div>
+          </li>
+          <li>
+            <time datetime="2026-11-08">8 nov 2026</time>
+            <div>
+              <h3>Ampliamos el surtido de víveres</h3>
+              <p>Llegaron nuevas referencias de abarrotes, aseo y bebidas. Pida la lista de precios actualizada.</p>
+            </div>
+          </li>
+          <li>
+            <time datetime="2026-10-30">30 oct 2026</time>
+            <div>
+              <h3>Cómo preparar sus tambores de combustible</h3>
+              <p>Tapas selladas, marcas visibles y entrega el día anterior: así el cargue es más rápido y seguro.</p>
+            </div>
+          </li>
+          <li>
+            <time datetime="2026-10-20">20 oct 2026</time>
+            <div>
+              <h3>Ahora puede pedir su servicio por WhatsApp</h3>
+              <p>Nuestro asistente recibe su solicitud a cualquier hora y un asesor la continúa en el mismo chat.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= UBICACIONES ================= -->
+    <section class="section places-sec" id="ubicaciones" aria-labelledby="placesTitle">
+      <div class="wrap">
+        <header class="head">
+          <h2 class="painted" id="placesTitle">Dónde encontrarnos en La Pedrera</h2>
+        </header>
         <div class="places">
-          <ul class="list list--compact" id="placeList">
-            <!-- Se llena desde app.js (CONFIG.ubicaciones) -->
-          </ul>
+          <ul class="places__list" id="placeList"><!-- desde app.js (CONFIG.ubicaciones) --></ul>
           <div class="map">
             <div class="map__types" role="group" aria-label="Tipo de mapa">
               <button type="button" data-maptype="m" aria-pressed="false">Mapa</button>
@@ -358,41 +369,32 @@
       </div>
     </section>
 
-    <!-- ============ NOSOTROS ============ -->
-    <section class="section section--soft" id="nosotros">
-      <div class="container about">
-        <img src="img/nosotros.jpg" alt="Colaborador de La Pedrera junto al río" loading="lazy">
-        <div>
-          <h2 class="title">Nosotros</h2>
-          <p>En <strong>Distribuciones La Pedrera S.A.S.</strong> llevamos productos de primera necesidad, combustible y mercancías por los ríos de la región. Conocemos las rutas y las necesidades de cada destino.</p>
-          <ul class="checks">
-            <li>Manejo responsable de víveres y combustible</li>
-            <li>Experiencia en las rutas fluviales de la región</li>
-            <li>Atención a comunidades, comercios y embarcaciones</li>
-            <li>Solicitudes por WhatsApp en minutos</li>
-          </ul>
-        </div>
-      </div>
-      <div class="container cols3">
-        <div class="box">
-          <h3>Misión</h3>
-          <p>Abastecer a las comunidades de la región con víveres, combustible y mercancías de forma segura, puntual y a precio justo, usando el río como camino.</p>
-        </div>
-        <div class="box">
-          <h3>Visión</h3>
-          <p>Ser en 2030 la empresa de transporte fluvial y abastecimiento de mayor confianza del sur del Amazonas colombiano.</p>
-        </div>
-        <div class="box">
-          <h3>Valores</h3>
-          <p>Responsabilidad, puntualidad, honestidad, respeto por las comunidades y cuidado del río y la selva.</p>
+    <!-- ================= NOSOTROS ================= -->
+    <section class="section about" id="nosotros" aria-labelledby="aboutTitle">
+      <div class="wrap about__grid">
+        <figure class="about__photo">
+          <img src="img/nosotros.jpg" alt="Tripulante de La Pedrera mirando el río" loading="lazy" width="620" height="1175">
+        </figure>
+        <div class="about__copy">
+          <h2 class="painted" id="aboutTitle">Gente del río, para la gente del río</h2>
+          <p class="about__lead">En Distribuciones La Pedrera S.A.S. conocemos cada curva del Caquetá. Llevamos lo necesario a quienes viven lejos de las carreteras, con puntualidad y a precio justo.</p>
+          <div class="about__cols">
+            <div><h3>Misión</h3><p>Abastecer a las comunidades de la región con víveres, combustible y mercancías de forma segura y puntual, usando el río como camino.</p></div>
+            <div><h3>Visión</h3><p>Ser en 2030 la empresa de transporte fluvial y abastecimiento de mayor confianza del sur del Amazonas colombiano.</p></div>
+            <div><h3>Valores</h3><p>Responsabilidad, puntualidad, honestidad, respeto por las comunidades y cuidado del río y la selva.</p></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ PREGUNTAS FRECUENTES ============ -->
-    <section class="section" id="preguntas">
-      <div class="container">
-        <h2 class="title">Preguntas frecuentes</h2>
+    <!-- ================= PREGUNTAS ================= -->
+    <section class="section faq-sec" id="preguntas" aria-labelledby="faqTitle">
+      <div class="wrap faq__grid">
+        <header class="head head--side">
+          <h2 class="painted" id="faqTitle">Preguntas frecuentes</h2>
+          <p>¿No encuentra su respuesta? Escríbanos y le contestamos en minutos.</p>
+          <a class="link" href="#" data-wa="Hola, tengo una pregunta.">Hacer una pregunta</a>
+        </header>
         <div class="faq">
           <details open>
             <summary>¿Cómo solicito un servicio?</summary>
@@ -408,7 +410,7 @@
           </details>
           <details>
             <summary>¿Venden víveres al por mayor?</summary>
-            <p>Sí. Atendemos tiendas, comunidades y embarcaciones con precios especiales por volumen. Pida la lista de precios por WhatsApp.</p>
+            <p>Sí. Atendemos tiendas, comunidades y embarcaciones con precios especiales por volumen.</p>
           </details>
           <details>
             <summary>¿La carga va asegurada?</summary>
@@ -422,101 +424,90 @@
       </div>
     </section>
 
-    <!-- ============ CONTACTO ============ -->
-    <section class="section" id="contacto">
-      <div class="container contact">
-        <div>
-          <h2 class="title">Contacto</h2>
-          <ul class="info">
-            <li><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg><span><small>WhatsApp</small><a href="#" data-wa="Hola" data-wa-text>+57 300 000 0000</a></span></li>
-            <li><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg><span><small>Correo</small><a href="#" id="emailLink">contacto@distribucioneslapedrera.com</a></span></li>
-            <li><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span><small>Oficina principal</small>Calle principal, frente a la cancha · La Pedrera, Amazonas</span></li>
-            <li><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg><span><small>Horario</small>Lunes a sábado · 7:00 a. m. – 6:00 p. m.</span></li>
+    <!-- ================= CONTACTO ================= -->
+    <section class="contact" id="contacto" aria-labelledby="contactTitle">
+      <div class="wrap contact__grid">
+        <div class="contact__info">
+          <h2 class="painted painted--light" id="contactTitle">Hablemos de su carga</h2>
+          <dl>
+            <div><dt>WhatsApp</dt><dd><a href="#" data-wa="Hola" data-wa-text>+57 300 000 0000</a></dd></div>
+            <div><dt>Correo</dt><dd><a href="#" id="emailLink">contacto@distribucioneslapedrera.com</a></dd></div>
+            <div><dt>Oficina</dt><dd>Calle principal, frente a la cancha, La Pedrera, Amazonas</dd></div>
+            <div><dt>Horario</dt><dd>Lunes a sábado, 7:00 a. m. a 6:00 p. m.</dd></div>
+          </dl>
+          <ul class="social">
+            <li><a href="#" data-social="facebook" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="#" data-social="instagram" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="#" data-social="tiktok" target="_blank" rel="noopener">TikTok</a></li>
           </ul>
         </div>
 
         <form class="form" id="contactForm" novalidate>
           <h3>Envíenos su solicitud</h3>
           <div class="form__row">
-            <label>Nombre *<input name="nombre" type="text" autocomplete="name" required></label>
-            <label>Teléfono *<input name="telefono" type="tel" autocomplete="tel" inputmode="tel" required></label>
+            <label>Nombre<input name="nombre" type="text" autocomplete="name" required></label>
+            <label>Teléfono<input name="telefono" type="tel" autocomplete="tel" inputmode="tel" required></label>
           </div>
-          <label>Servicio *
+          <label>Servicio
             <select name="servicio" required>
-              <option value="">Seleccione</option>
+              <option value="">Elija un servicio</option>
               <option>Venta de víveres</option>
               <option>Transporte de combustible</option>
               <option>Transporte de víveres con embarcaciones</option>
               <option>Otro</option>
             </select>
           </label>
-          <label>Mensaje *<textarea name="mensaje" rows="3" placeholder="Origen, destino, carga o fechas" required></textarea></label>
+          <label>Mensaje<textarea name="mensaje" rows="3" placeholder="Origen, destino, carga o fecha" required></textarea></label>
           <p class="form__error" id="formError" role="alert"></p>
-          <button type="submit" class="btn btn--wa btn--block">
+          <button class="btn btn--wa btn--block" type="submit">
             <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Enviar por WhatsApp
           </button>
+          <p class="form__note">Todos los campos son obligatorios. Se abrirá WhatsApp con su mensaje listo.</p>
         </form>
       </div>
     </section>
   </main>
 
-  <!-- ============ PIE ============ -->
+  <!-- ================= PIE ================= -->
   <footer class="footer">
-    <div class="container footer__cols">
-      <div>
-        <h4>Servicios</h4>
-        <ul>
-          <li><a href="#servicios">Venta de víveres</a></li>
-          <li><a href="#servicios">Transporte de combustible</a></li>
-          <li><a href="#servicios">Transporte fluvial de mercancías</a></li>
-        </ul>
+    <div class="wrap footer__grid">
+      <div class="footer__brand">
+        <span class="brand__chip"><img src="img/logo.svg" alt="" width="44" height="18"></span>
+        <p><strong>Distribuciones La Pedrera S.A.S.</strong><br>Transporte fluvial, víveres y combustible por el río Caquetá.</p>
       </div>
-      <div>
-        <h4>Enlaces</h4>
+      <nav aria-label="Enlaces del pie">
         <ul>
+          <li><a href="#servicios">Servicios</a></li>
           <li><a href="#rutas">Rutas y horarios</a></li>
-          <li><a href="#catalogo">Catálogo de víveres</a></li>
+          <li><a href="#catalogo">Catálogo</a></li>
           <li><a href="#novedades">Novedades</a></li>
-          <li><a href="#solicitar">Cómo solicitar</a></li>
-          <li><a href="#preguntas">Preguntas frecuentes</a></li>
+          <li><a href="#ubicaciones">Ubicaciones</a></li>
           <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#preguntas">Preguntas</a></li>
+          <li><a href="#contacto">Contacto</a></li>
         </ul>
-      </div>
-      <div>
-        <h4>Síganos</h4>
-        <ul>
-          <li><a href="#" data-social="facebook" target="_blank" rel="noopener">Facebook</a></li>
-          <li><a href="#" data-social="instagram" target="_blank" rel="noopener">Instagram</a></li>
-          <li><a href="#" data-social="tiktok" target="_blank" rel="noopener">TikTok</a></li>
-        </ul>
-      </div>
+      </nav>
     </div>
-    <div class="footer__entity">
-      <div class="container">
-        <strong>Distribuciones La Pedrera S.A.S.</strong>
-        <p>La Pedrera, Amazonas, Colombia · WhatsApp: <span data-wa-text>+57 300 000 0000</span> · <span data-email>contacto@distribucioneslapedrera.com</span></p>
-        <p class="footer__small">© <span id="year"></span> Todos los derechos reservados · Sitio web por <a href="#" target="_blank" rel="noopener">TYR Productions</a></p>
-      </div>
+    <div class="wrap footer__legal">
+      <p>© <span id="year"></span> Distribuciones La Pedrera S.A.S. · La Pedrera, Amazonas, Colombia</p>
+      <p>Sitio web por <a href="#" target="_blank" rel="noopener">TYR Productions</a></p>
     </div>
   </footer>
 
+  <!-- Botón flotante de WhatsApp -->
   <a href="#" class="wa-float" data-wa="Hola, me interesa conocer sus servicios." aria-label="¿Te interesa? Contáctanos por WhatsApp">
     <span class="wa-float__icon"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg></span>
     <span class="wa-float__text"><small>¿Te interesa?</small><strong>¡Contáctanos!</strong></span>
   </a>
 
-  <!-- ============ ÍCONOS ============ -->
+  <!-- ================= ÍCONOS ================= -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>
-      <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.13c-.25.69-1.44 1.32-1.98 1.36-.5.05-.98.23-3.3-.69-2.8-1.1-4.56-3.96-4.7-4.15-.13-.18-1.12-1.49-1.12-2.85 0-1.35.71-2.02.96-2.3.25-.27.55-.34.73-.34h.53c.17 0 .4-.06.62.48.23.55.78 1.9.85 2.04.07.14.11.3.02.48-.09.18-.14.3-.27.46l-.41.48c-.14.14-.28.29-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.69-.8.87-1.08.18-.27.37-.23.62-.14.25.09 1.6.75 1.87.89.27.14.46.2.53.32.07.11.07.66-.18 1.35Z"/></symbol>
-      <symbol id="i-cart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 4h2l2.4 11.2a1 1 0 0 0 1 .8h9.2a1 1 0 0 0 1-.76L20.5 8H6.2M9 20.5h.01M17 20.5h.01"/></symbol>
-      <symbol id="i-fuel" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 21V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16M3 21h12M4 10h10M14 8l3 3v6.5a1.5 1.5 0 0 0 3 0V9l-3-3"/></symbol>
-      <symbol id="i-boat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M2 20c1.5 1 3 1 4.5 0s3-1 4.5 0 3 1 4.5 0 3-1 4.5 0M3.5 16 2.5 12h19l-2 4M6 12V8h8v4M9 8V5h3v3M16 12V9h3"/></symbol>
-      <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
-      <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm-1 1 9 7 9-7"/></symbol>
-      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 7v5l3 2"/></symbol>
-      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="m20 20-4-4"/></symbol>
-      <symbol id="i-contrast" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path fill="currentColor" d="M12 3a9 9 0 0 1 0 18Z"/></symbol>
+      <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.13c-.25.69-1.44 1.32-1.98 1.36-.5.05-.98.23-3.3-.69-2.8-1.1-4.56-3.96-4.7-4.15-.13-.18-1.12-1.49-1.12-2.85 0-1.35.71-2.020.96-2.3.25-.27.55-.34.73-.34h.53c.17 0 .4-.06.62.48.23.55.78 1.9.85 2.04.07.14.11.3.02.48-.09.18-.14.3-.27.46l-.41.48c-.14.14-.28.29-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.220 2.2 1.36.27.14.43.11.59-.07.16-.18.69-.8.87-1.08.18-.27.37-.23.62-.14.25.09 1.6.75 1.87.89.27.14.46.2.53.32.07.11.07.66-.18 1.35Z"/></symbol>
+      <symbol id="i-quote" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M7 3h13l6 6v20H7Z"/><path d="M20 3v6h6M11 15h11M11 20h11M11 25h6"/></g></symbol>
+      <symbol id="i-boat" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M3 19h26l-3 6H6Z"/><path d="M8 19v-6h10v6M11 13V8h5v5M21 19v-4h4v4"/><path d="M2 29c2 1.3 4 1.3 6 0s4-1.3 6 0 4 1.3 6 0 4-1.3 6 0 3 1 4 .4"/></g></symbol>
+      <symbol id="i-list" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 8h15M12 16h15M12 24h15"/><path d="M5 8h1M5 16h1M5 24h1" stroke-width="3.4"/></g></symbol>
+      <symbol id="i-pin" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M16 29s-9-8-9-15a9 9 0 0 1 18 0c0 7-9 15-9 15Z"/><circle cx="16" cy="14" r="3.4"/></g></symbol>
     </defs>
   </svg>
 
