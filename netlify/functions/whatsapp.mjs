@@ -5,7 +5,7 @@
    Variables: WHATSAPP_TOKEN, WHATSAPP_PHONE_ID, WHATSAPP_VERIFY_TOKEN,
               WHATSAPP_APP_SECRET, EMPLEADO_WHATSAPP
    ===================================================================== */
-import { procesar, mensajeConfirmado, mensajeConsultaRegistrada, mensajeEstado, codigoSolicitud, resumen } from "../lib/bot.mjs";
+import { procesar, normalizar, mensajeConfirmado, mensajeConsultaRegistrada, mensajeEstado, codigoSolicitud, resumen } from "../lib/bot.mjs";
 import { enviar, marcarLeido, textoHistorial, firmaValida, env } from "../lib/whatsapp-api.mjs";
 import {
   leerConversacion, guardarConversacion, registrarEntrante, registrarSaliente,
@@ -79,9 +79,12 @@ async function atender(msg, nombrePerfil, sitio) {
   if (!esNuevo) return; // Meta reenvió un mensaje que ya atendimos
   marcarLeido(msg.id);
 
-  // El empleado también puede escribirle al bot (así WhatsApp le permite recibir avisos 24 h)
+  // El empleado también puede escribirle al bot (así WhatsApp le permite recibir avisos 24 h).
+  // Si escribe "panel" o "empleado" recibe el enlace al panel; cualquier otro mensaje sigue
+  // el flujo normal de cliente (útil para hacer la demostración con un solo celular).
   const empleado = soloDigitos(env("EMPLEADO_WHATSAPP"));
-  if (empleado && soloDigitos(de) === empleado) {
+  const pideP = ["panel", "empleado"].includes(normalizar(entrada.texto || ""));
+  if (empleado && soloDigitos(de) === empleado && pideP) {
     await responder(de, [{ tipo: "texto", texto: `👷 Hola. Este número está registrado como *empleado* de La Pedrera.\nDurante las próximas 24 horas le llegarán aquí los avisos de solicitudes nuevas.\n\nPanel de solicitudes: ${sitio}/panel.html` }]);
     return;
   }
