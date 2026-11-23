@@ -7,7 +7,7 @@
    --------------------------------------------------------------------- */
 const CONFIG = {
   // WhatsApp con indicativo de país, sin "+" ni espacios (57 = Colombia)
-  whatsapp: "573000000000", // TODO: número real
+  whatsapp: "15551692244", // número de PRUEBA del bot (Meta). Cambiar por el real en producción
   email: "contacto@distribucioneslapedrera.com", // TODO: correo real
 
   redes: {

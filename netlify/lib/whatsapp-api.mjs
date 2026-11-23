@@ -3,7 +3,7 @@
    Variables de entorno (Netlify → Project configuration → Environment variables):
      WHATSAPP_TOKEN     token de acceso de Meta
      WHATSAPP_PHONE_ID  "Phone number ID" del número del bot (no es el número)
-     GRAPH_VERSION      opcional, versión de la Graph API (por defecto v23.0)
+     GRAPH_VERSION      opcional, versión de la Graph API (por defecto v25.0)
    ===================================================================== */
 import crypto from "node:crypto";
 
@@ -54,7 +54,7 @@ export async function enviar(para, msg) {
   const phoneId = env("WHATSAPP_PHONE_ID");
   if (!token || !phoneId) return { ok: false, error: "Faltan WHATSAPP_TOKEN o WHATSAPP_PHONE_ID en Netlify" };
   try {
-    const res = await fetch(`https://graph.facebook.com/${env("GRAPH_VERSION", "v23.0")}/${phoneId}/messages`, {
+    const res = await fetch(`https://graph.facebook.com/${env("GRAPH_VERSION", "v25.0")}/${phoneId}/messages`, {
       method: "POST",
       headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
       body: JSON.stringify(aPayload(para, msg)),
@@ -78,7 +78,7 @@ export async function marcarLeido(waId) {
   const phoneId = env("WHATSAPP_PHONE_ID");
   if (!token || !phoneId || !waId) return;
   try {
-    await fetch(`https://graph.facebook.com/${env("GRAPH_VERSION", "v23.0")}/${phoneId}/messages`, {
+    await fetch(`https://graph.facebook.com/${env("GRAPH_VERSION", "v25.0")}/${phoneId}/messages`, {
       method: "POST",
       headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
       body: JSON.stringify({ messaging_product: "whatsapp", status: "read", message_id: waId }),
